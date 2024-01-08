@@ -1,0 +1,24 @@
+.checkbox:active {
+  background-color: rgba(0, 46, 208, 1);
+}
+.checkbox:hover {
+  border: 2px solid rgba(27, 74, 240, 1);
+}
+.checkbox_after-border {
+  content: "";
+  border: solid;
+  border-color: #fff;
+  border-width: 0px 1px 1px 0px;
+
+  opacity: 0;
+  /* Outras propriedades de estilo */
+}
+
+.checkbox_input:checked ~ .checkbox_after-border {
+  opacity: 1;
+}
+
+.checkbox_input:checked ~ .checkbox_after-border.disabled {
+  border-color: rgb(138, 138, 138);
+  opacity: 1;
+}

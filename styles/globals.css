@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2"),
+    url("../fonts/Mulish-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+* {
+  font-family: "Mulish", sans-serif;
+}
+@layer base {
+  :root {
+    /* Colors */
+    --primary: 45, 91, 255;
+    --secondary: 98, 132, 253;
+    --tertiary: 150, 173, 255;
+    --quaternary: 236, 240, 255;
+    -warning: 255, 48, 48;
+    --hover: 27, 74, 240;
+    --click: 0, 46, 208;
+    --icon: 124, 123, 123;
+    --outline: 215, 215, 215;
+    --divider: 237, 237, 237;
+    --focus: 175, 75, 254;
+
+    --bg-light: 255, 255, 255;
+    --bg-dark: 248, 248, 248;
+    --bg-disabled: 239, 239, 239;
+    
+    --bg-error: 255, 192, 192;
+    --bg-notification: 255, 239, 152;
+    -active: 58, 201, 34;
+    --bg-success:230,255,226;
+    --bg-night: 50, 50, 50;
+
+    --text-primary: 24, 24, 24;
+    --text-secondary: 92, 92, 92;
+    --text-tertiary: 116, 116, 116;
+    --text-disabled: 138, 138, 138;
+
+    /* Screens */
+
+    --screen-mobile: 640px;
+    --screen-tablet: 1024px;
+    --screen-desktop: 1440px;
+    --screen-tv: 1920px;
+
+    /* Shadows */
+    --shadow-sm: 0px 0px 10px rgba(132, 132, 132, 15%);
+    --shadow-md: 0px 0px 20px rgba(132, 132, 132, 20%);
+    --shadow-lg: 0px 0px 30px rgba(132, 132, 132, 25%);
+    --shadow-focus: 0px 0px 0px 2px #643296;
+    --shadow-outline: 0px 0px 0px 2px #e8e8e8;
+    --shadow-button-focus: 0px 0px 0px 2px #af4bfe;
+
+    /* blur */
+    --blur: 4px;
+
+    /* Spacing */
+    --fit-content: 'fit-content',
+    --spacing-none: 0px;
+    --spacing-12xs: 1px;
+    --spacing-10xs: 2px;
+    --spacing-8xs: 4px;
+    --spacing-4xs: 8px;
+    --spacing-2xs: 12px;
+    
+    --spacing-xs: 16px;
+    --spacing-sm: 20px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 40px;
+    --spacing-2xl: 48px;
+    --spacing-4xl: 56px;
+    --spacing-8xl: 60px;
+    --spacing-9xl: 64px;
+    --spacing-10xl: 68px; /* Renamed from 12xl to 10xl */
+    --spacing-11xl: 72px; /* Renamed from 12xl to 10xl */
+    --spacing-11_75xl: 78px; /* Renamed from 16xl to 12xl */
+    --spacing-12xl: 80px; /* Renamed from 16xl to 12xl */
+    --spacing-14xl: 94px; /* Renamed from 20xl to 14xl, assuming it fits here */
+    --spacing-16xl: 118px; /* Renamed from 21xl to 16xl */
+    --spacing-xxl1: 150px; /* Previously --spacing-150 */
+    --spacing-xxl2: 250px; /* Previously --spacing-250 */
+    --spacing-xxl3: 268px; /* Previously --spacing-268 */
+    --spacing-xxl4: 293px; /* Previously --spacing-293 */
+    --spacing-xxl5: 310px; /* Previously --spacing-310 */
+    --spacing-xxl6: 315px; /* Previously --spacing-315 */
+    --spacing-xxl7: 340px; /* Previously --spacing-340 */
+    --spacing-xxl8: 360px; /* Previously --spacing-360 */
+    --spacing-xxl9: 370px; /* Previously --spacing-370 */
+    --spacing-xxl10: 400px; /* Previously --spacing-400 */
+    --spacing-xxl11: 422px; /* Previously --spacing-422 */
+    --spacing-xxl12: 424px; /* Previously --spacing-424 */
+    --spacing-xxl13: 446px; /* Previously --spacing-446 */
+    --spacing-xxl14: 480px; /* Previously --spacing-480 */
+    --spacing-xxl15: 518px; /* Previously --spacing-518 */
+    --spacing-xxl16: 569px; /* Previously --spacing-569 */
+    --spacing-xxl17: 640px; /* Previously --spacing-640 */
+    --spacing-xxl18: 658px; /* Previously --spacing-658 */
+    --spacing-xxl19: 698px; /* Previously --spacing-698 */
+    --spacing-xxl20: 800px; /* Previously --spacing-800 */
+    --spacing-xxl21: 1000px; /* Previously --spacing-1000 */
+    --spacing-xxl22: 1032px; /* Previously --spacing-1032 */
+    /* Border radius */
+
+    --border-radius-none: 0px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-xlg: 24px;
+
+    /* Font Size */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+  }
+
+  .theme-violet {
+    --primary: 175, 75, 254;
+    --secondary: 190, 116, 249;
+    --tertiary: 226, 189, 255;
+    --quaternary: 245, 232, 255;
+  }
+
+  .custom-gradient_disabled {
+    background: linear-gradient(0deg, #efefef, #efefef),
+      linear-gradient(0deg, #8a8a8a, #8a8a8a);
+  }
+}

@@ -80,6 +80,8 @@ module.exports = {
       xxl20: "var(--spacing-xxl20) /* 800px */",
       xxl21: "var(--spacing-xxl21) /* 1000px */",
       xxl22: "var(--spacing-xxl22) /* 1032px */",
+      xxl23: "var(--spacing-xxl23) /* 1080px */",
+      xxl24: "var(--spacing-xxl24) /* 1920px */",
     },
     fontSize: {
       "2xs": "var(--spacing-2xs) /* 12px */",
@@ -89,6 +91,7 @@ module.exports = {
       md: "var(--text-md)",
       lg: "var(--text-lg)",
       xl: "var(--text-xl)",
+      xxl: "var(--text-xxl)",
     },
     extend: {
       colors: {
@@ -97,6 +100,7 @@ module.exports = {
         tertiary: toRgba("--tertiary"),
         quaternary: toRgba("--quaternary"),
         warning: toRgba("-warning"),
+
         active: toRgba("-active"),
         hover: toRgba("--hover"),
         click: toRgba("--click"),
@@ -115,12 +119,15 @@ module.exports = {
         notification: toRgba("--bg-notification"),
         night: toRgba("--bg-night"),
         Success: toRgba("--bg-success"),
+        warning: toRgba("--bg-warning"),
+        active: toRgba("--bg-active"),
       },
       textColor: {
         gray: {
           primary: toRgba("--text-primary"),
           secondary: toRgba("--text-secondary"),
           tertiary: toRgba("--text-tertiary"),
+          placeholder: toRgba("--placeholder"),
         },
       },
       boxShadow: {
@@ -140,6 +147,7 @@ module.exports = {
         md: "var(--border-radius-md)",
         lg: "var(--border-radius-lg)",
         xlg: "var(--border-radius-xlg)",
+        xxlg: "var(--border-radius-xxlg)",
       },
       //código omitido
     },

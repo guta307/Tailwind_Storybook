@@ -1,0 +1,24 @@
+.DropdownList {
+  height: fit-content;
+  max-height: 240px;
+}
+
+.DropdownList::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  border-radius: 4px;
+}
+
+.DropdownList::-webkit-scrollbar-track {
+  background: rgba(237, 237, 237, 1);
+  border-radius: 4px;
+  /* Track color */
+}
+
+.DropdownList::-webkit-scrollbar-thumb {
+  background: rgba(215, 215, 215, 1);
+}
+
+.DropdownList::-webkit-scrollbar-thumb:hover {
+  background: rgba(215, 215, 215, 1);
+  /* Handle color on hover */
+}

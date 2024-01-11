@@ -1,0 +1,5 @@
+.LoginBackground {
+  background-image: url("../../../assets/pages/login/loginBackground.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

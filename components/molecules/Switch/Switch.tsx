@@ -29,9 +29,11 @@ const SwitchButton = ({
   const [Active, setActive] = useState(active);
 
   const handleClick = () => {
-    setActive(!Active);
-    if (onToggle) {
-      onToggle(!Active);
+    if (!disabled) {
+      setActive(!Active);
+      if (onToggle) {
+        onToggle(!Active);
+      }
     }
   };
   return (

@@ -6,9 +6,6 @@ const meta: Meta<CheckboxProps> = {
   title: "Molecules/checkbox",
   component: Checkbox,
   argTypes: {
-    checked: {
-      type: "boolean",
-    },
     disabled: {
       type: "boolean",
     },

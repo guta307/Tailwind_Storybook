@@ -2,6 +2,13 @@ import React from "react";
 import Button from "../button/Button";
 import Image from "next/image";
 
+/*image imports*/
+import notificationIcon from "../../../assets/components/notice/notificationIcon.svg";
+import errorIcon from "../../../assets/components/notice/ErrorIcon.svg";
+import avatarIcon from "../../../assets/components/notice/avatar.svg";
+import bookingIcon from "../../../assets/components/notice/bookingIcon.svg";
+import messageNotificationIcon from "../../../assets/components/notice/messageNotification.svg";
+import xIcon from "../../../assets/components/global/x.svg";
 export interface NoticeProps {
   type:
     | "notification"
@@ -14,11 +21,11 @@ export interface NoticeProps {
 
 const Notice = ({ type = "notification" }: NoticeProps) => {
   const iconMapping = {
-    notification: "/components/notice/notificationIcon.svg",
-    error: "/components/notice/ErrorIcon.svg",
-    message: "/components/notice/avatar.svg",
-    message_booking: "/components/notice/bookingIcon.svg",
-    message_notification: "/components/notice/messageNotification.svg",
+    notification: notificationIcon,
+    error: errorIcon,
+    message: avatarIcon,
+    message_booking: bookingIcon,
+    message_notification: messageNotificationIcon,
   };
 
   const renderIcon = () =>
@@ -128,7 +135,7 @@ const Notice = ({ type = "notification" }: NoticeProps) => {
       {type === "message_booking" && (
         <p className="text-lg font-bold text-gray-secondary">+2000</p>
       )}
-      <Image src="components/global/x.svg" alt="Close Icon" />
+      <Image src={xIcon} alt="Close Icon" />
     </div>
   );
 };

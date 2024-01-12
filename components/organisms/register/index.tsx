@@ -87,7 +87,7 @@ const RegisterOrganism = () => {
 
                 <label className=" flex flex-col gap-1 font-bold text-md text-gray-primary">
                   Senha
-                  <Input className=" w-xxl9" />
+                  <Input icon={true} className=" w-xxl9" />
                 </label>
               </div>
 

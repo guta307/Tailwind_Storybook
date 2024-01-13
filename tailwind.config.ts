@@ -92,6 +92,9 @@ module.exports = {
       lg: "var(--text-lg)",
       xl: "var(--text-xl)",
       xxl: "var(--text-xxl)",
+      tmd: "var(--title-md)",
+      tlg: "var(--title-lg)",
+      txl: "var(--title-xl)",
     },
     extend: {
       colors: {

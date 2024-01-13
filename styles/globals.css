@@ -134,6 +134,11 @@
     --text-lg: 18px;
     --text-xl: 20px;
     --text-xxl: 24px;
+
+    /* Title Font Size */
+    --title-md: 40px;
+    --title-lg: 48px;
+    --title-xl: 56px;
   }
 
   .theme-violet {

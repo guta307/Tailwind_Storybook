@@ -4,6 +4,8 @@ const config: StorybookConfig = {
   stories: [
     "../components/molecules/**/*.mdx",
     "../components/molecules/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../components/atoms/**/*.mdx",
+    "../components/atoms/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",

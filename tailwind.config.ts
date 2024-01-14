@@ -117,6 +117,8 @@ module.exports = {
       },
       backgroundColor: {
         dark: toRgba("--bg-dark"),
+        light: toRgba("--bg-light"),
+
         disabled: toRgba("--bg-disabled"),
         error: toRgba("--bg-error"),
         notification: toRgba("--bg-notification"),

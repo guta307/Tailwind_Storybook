@@ -9,6 +9,7 @@ import avatarIcon from "../../../assets/components/notice/avatar.svg";
 import bookingIcon from "../../../assets/components/notice/bookingIcon.svg";
 import messageNotificationIcon from "../../../assets/components/notice/messageNotification.svg";
 import xIcon from "../../../assets/components/global/x.svg";
+import Box from "../../atoms/Box/Box";
 export interface NoticeProps {
   type:
     | "notification"
@@ -99,20 +100,12 @@ const Notice = ({ type = "notification" }: NoticeProps) => {
     );
   };
 
-  const containerClasses = `rounded-md flex items-center justify-between 
-    ${
-      type === "notification" ? "p-5 gap-6 w-xxl21 h-12xl bg-notification" : ""
-    } 
-    ${type === "error" ? "p-5 w-xxl21 gap-6 h-12xl bg-error" : ""}
-    ${type === "choice" ? "p-5 w-xxl21 gap-5 h-xxl1 bg-dark" : ""}
-    ${
-      type === "message"
-        ? "p-4xs w-xxl15 gap-3 h-11_75xl shadow-md bg-dark"
-        : ""
-    }
-    ${
-      type === "message_booking" ? "p-4xs w-xxl15 h-11xl shadow-md bg-dark" : ""
-    }
+  const containerClasses = `flex items-center justify-between 
+    ${type === "notification" ? "p-5 gap-6 w-xxl21 h-12xl" : ""} 
+    ${type === "error" ? "p-5 w-xxl21 gap-6 h-12xl" : ""}
+    ${type === "choice" ? "p-5 w-xxl21 gap-5 h-xxl1" : ""}
+    ${type === "message" ? "p-4xs w-xxl15 gap-3 h-11_75xl shadow-md" : ""}
+    ${type === "message_booking" ? "p-4xs w-xxl15 h-11xl shadow-md" : ""}
 
     ${
       type === "message_notification"
@@ -125,8 +118,21 @@ const Notice = ({ type = "notification" }: NoticeProps) => {
     type === "choice" ? "flex-col gap-5" : "gap-lg items-center"
   }`;
 
+  const getBoxType = () => {
+    switch (type) {
+      case "notification":
+        return "alert";
+      case "error":
+        return "error";
+      case "choice":
+        return "dark";
+      default:
+        return "dark"; // Para message, message_booking, message_notification
+    }
+  };
+
   return (
-    <div className={containerClasses}>
+    <Box type={getBoxType()} className={containerClasses}>
       <section className={contentClasses}>
         {renderIcon()}
         {renderContent()}
@@ -136,7 +142,7 @@ const Notice = ({ type = "notification" }: NoticeProps) => {
         <p className="text-lg font-bold text-gray-secondary">+2000</p>
       )}
       <Image src={xIcon} alt="Close Icon" />
-    </div>
+    </Box>
   );
 };
 

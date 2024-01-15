@@ -29,6 +29,14 @@ export const Default: StoryObj<BoxProps> = {
   },
 };
 
+export const Secondary: StoryObj<BoxProps> = {
+  args: {
+    children: "Este é uma Box Padrão",
+    filledBackground: true,
+    type: "secondary",
+  },
+};
+
 export const BoxAlert: StoryObj<BoxProps> = {
   args: {
     children: "Este é um alerta!",

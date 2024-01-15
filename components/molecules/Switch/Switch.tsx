@@ -11,9 +11,10 @@ import activeIcon from "../../../assets/components/switch/activeIcon.svg";
 
 import Image from "next/image";
 import { useState } from "react";
+import SwitchStyle from "./Switch.style";
 
 export type SwitchProps = {
-  onToggle: Function;
+  onToggle?: Function;
   active?: boolean;
   type?: "primary" | "secondary" | "on/off" | "mood";
   disabled?: boolean;
@@ -41,14 +42,7 @@ const SwitchButton = ({
       className={` w-10 p-8xs focus:border-2 focus:border-focus h-6 rounded-xlg flex items-center  ${
         Active ? "justify-end" : "justify-start"
       } 
-      ${disabled && "bg-disabled"}
-      ${!disabled && type === "primary" && "bg-primary"} 
-      ${!disabled && type === "secondary" && "bg-quaternary"}
-      ${!disabled && type === "on/off" && Active && "bg-active"}
-      ${!disabled && type === "on/off" && !Active && "bg-warning"}
-      ${!disabled && type === "mood" && Active && "bg-night w-11"}
-      ${!disabled && type === "mood" && !Active && "bg-quaternary day w-11"}
-      `}
+     ${SwitchStyle({ disabled, type }, { Active })} `}
       onClick={handleClick}
     >
       <div className=" bg-light w-md h-md rounded-full flex justify-center items-center">

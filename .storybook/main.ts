@@ -6,6 +6,7 @@ const config: StorybookConfig = {
     "../components/molecules/**/*.stories.@(js|jsx|mjs|ts|tsx)",
     "../components/atoms/**/*.mdx",
     "../components/atoms/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../components/Tokens/**/*.mdx",
   ],
   addons: [
     "@storybook/addon-links",
@@ -20,6 +21,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  staticDirs: ["../assets"],
+  staticDirs: ["../assets", "../public"],
 };
 export default config;
